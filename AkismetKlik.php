@@ -4,7 +4,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 # Include PHP5 Akismet class from http://www.achingbrain.net/stuff/akismet (GPL)
-require_once('Akismet.class.php');
+require_once( 'Akismet.class.php' );
 
 #Extension credits
 $wgExtensionCredits['other'][] = array(
@@ -64,10 +64,12 @@ function wfAkismetFilterMerged( $editPage, $text ) {
 	return !$ret;
 }
 
-#
-# This class provides the interface to the filters
-#
+/**
+ * This class provides the interface to the filters
+ */
 class AkismetKlik {
+
+	public $previousFilter;
 
 	/**
 	 * @param $settings array
@@ -127,7 +129,7 @@ class AkismetKlik {
 		$akismet->setCommentContent( $text );
 		$akismet->setCommentType( "wiki" );
 		$akismet->setPermalink( $wgAKSiteUrl . '/wiki/' . $pgtitle );
-		if( $akismet->isCommentSpam() && !$wgUser->isAllowed( 'bypassakismet' ) ) {
+		if ( $akismet->isCommentSpam() && !$wgUser->isAllowed( 'bypassakismet' ) ) {
 			wfDebugLog( 'AkismetKlik', "Match!\n" );
 			EditPage::spamPage( "http://akismet.com blacklist error" );
 			wfProfileOut( __METHOD__ );
