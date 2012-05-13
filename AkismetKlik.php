@@ -8,11 +8,15 @@ require_once( 'Akismet.class.php' );
 
 #Extension credits
 $wgExtensionCredits['other'][] = array(
+	'path' => __FILE__,
 	'name' => 'AkismetKlik',
 	'author' => 'Carl Austin Bennett',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:AkismetKlik',
-	'description' => "Rejects edits from suspected comment spammers on Akismet's blacklist.",
+	'url' => 'https://www.mediawiki.org/wiki/Extension:AkismetKlik',
+	'descriptionmsg' => 'akismetklik-desc',
 );
+
+$dir = dirname( __FILE__ ) . '/';
+$wgExtensionMessagesFiles['AkismetKlik'] = $dir . 'AkismetKlik.i18n.php';
 
 # Set site-specific configuration values
 $wgAKkey = '';
