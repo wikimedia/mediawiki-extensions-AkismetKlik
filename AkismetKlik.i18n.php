@@ -48,6 +48,20 @@ $messages['ja'] = array(
 	'akismetklik-desc' => 'Akismet のブラックリストでコメントスパムの疑いがある編集を却下する',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'akismetklik-desc' => 'Akismet의 차단 목록에 의심되는 덧글을 다는 스패머로부터 편집 거부',
+);
+
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'akismetklik-desc' => 'Hält Änderunge op fun, wat mer jläuve, dadd_et Kommenta-SPAMmere sin künnte, opjrond fun däm Akismet sing „schwaze Leß“.',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -60,5 +74,12 @@ $messages['nl'] = array(
  */
 $messages['pl'] = array(
 	'akismetklik-desc' => 'Odrzuca podejrzane edycje komentarzy robione przez spamerów z czarnej listy Akismet',
+);
+
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'akismetklik-desc' => "Arfuda le modìfiche dai sospet spammer ëd coment ch'a son an dzora ëd na lista nèira d'Akismet",
 );
 
