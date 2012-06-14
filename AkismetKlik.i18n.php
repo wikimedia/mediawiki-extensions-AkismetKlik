@@ -16,8 +16,51 @@ $messages['en'] = array(
 	'akismetklik-desc' => "Rejects edits from suspected comment spammers on Akismet's blacklist",
 );
 
+/** Message documentation (Message documentation) */
 $messages['qqq'] = array(
 	'akismetklik-desc' => '{{desc}}',
+);
+
+/** Arabic (العربية)
+ * @author DRIHEM
+ */
+$messages['ar'] = array(
+	'akismetklik-desc' => 'يرفض التعديلات من معلقي السبام المشتبه فيهم على القائمة السوداء لـ Akismet',
+);
+
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'akismetklik-desc' => 'Адхіляе рэдагаваньні ад падазроных спамэраў у камэнтарах паводле чорнага сьпісу Akismet',
+);
+
+/** German (Deutsch)
+ * @author Kghbln
+ */
+$messages['de'] = array(
+	'akismetklik-desc' => 'Unterbindet Bearbeitungen durch vermutliche Kommentarspammer, die sich auf der Akismet-Blacklist befinden',
+);
+
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'akismetklik-desc' => 'Zajźujo změnam wót nejskerjejšych spamowarjow komentarow na cornej lisćinje Akismeta',
+);
+
+/** Spanish (español)
+ * @author Erdemaslancan
+ */
+$messages['es'] = array(
+	'akismetklik-desc' => 'Rechaza las modificaciones de los spammers presunto comentario en lista negra de Akismet',
+);
+
+/** French (français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'akismetklik-desc' => "Rejette les modifications provenant de soupçonnés pollueurs de commentaires dans la liste noire d'Akismet",
 );
 
 /** Galician (Galego)
@@ -34,7 +77,21 @@ $messages['he'] = array(
 	'akismetklik-desc' => 'דחיית עריכות שמגיעות מזבלני תגובות שמופיעים ברישמה השחורה של אקיסמט',
 );
 
-/** Italian (Italiano)
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'akismetklik-desc' => 'Wotpokazuje změny wot podhladnych spamowarjow komentarow na čornej lisćinje Akismeta.',
+);
+
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'akismetklik-desc' => 'Rejecta modificationes ab origines de spam de commentos suspectate per le lista nigre de Akismet',
+);
+
+/** Italian (italiano)
  * @author Beta16
  */
 $messages['it'] = array(
@@ -62,6 +119,13 @@ $messages['ksh'] = array(
 	'akismetklik-desc' => 'Hält Änderunge op fun, wat mer jläuve, dadd_et Kommenta-SPAMmere sin künnte, opjrond fun däm Akismet sing „schwaze Leß“.',
 );
 
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'akismetklik-desc' => 'Отфрла уредувања од осомничени спамери заведени на црниот список на Akismet',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -69,7 +133,7 @@ $messages['nl'] = array(
 	'akismetklik-desc' => "Voorkomt bewerkingen van spammers in reacties via Akismet's blacklist",
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author BeginaFelicysym
  */
 $messages['pl'] = array(
@@ -77,9 +141,17 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'akismetklik-desc' => "Arfuda le modìfiche dai sospet spammer ëd coment ch'a son an dzora ëd na lista nèira d'Akismet",
+	'akismetklik-desc' => "A arfuda le modìfiche dai sospet spantia rumenta ëd coment ch'a son ëdzora a la lista nèira d'Akismet",
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'akismetklik-desc' => 'Tinatanggihan ang mga pagbabago mula sa mga pinaghihinalaang mga tagapagbuhos ng basurang kumento na nasa isang talaan ng mga pinagbabawalan ng Akismet',
 );
 
