@@ -35,7 +35,7 @@ $messages['ast'] = array(
 	'akismetklik-desc' => "Refuga les ediciones de sospechosos de facer spam nos comentarios de la llista prieta d'Akismet",
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
@@ -49,7 +49,7 @@ $messages['de'] = array(
 	'akismetklik-desc' => 'Unterbindet Bearbeitungen durch vermutliche Kommentarspammer, die sich auf der Akismet-Blacklist befinden',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -70,7 +70,7 @@ $messages['fr'] = array(
 	'akismetklik-desc' => "Rejette les modifications provenant de soupçonnés pollueurs de commentaires dans la liste noire d'Akismet",
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -84,7 +84,7 @@ $messages['he'] = array(
 	'akismetklik-desc' => 'דחיית עריכות שמגיעות מזבלני תגובות שמופיעים ברישמה השחורה של אקיסמט',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
