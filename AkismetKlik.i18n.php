@@ -162,3 +162,10 @@ $messages['tl'] = array(
 	'akismetklik-desc' => 'Tinatanggihan ang mga pagbabago mula sa mga pinaghihinalaang mga tagapagbuhos ng basurang kumento na nasa isang talaan ng mga pinagbabawalan ng Akismet',
 );
 
+/** Ukrainian (українська)
+ * @author Olvin
+ */
+$messages['uk'] = array(
+	'akismetklik-desc' => 'Скасування змін, зроблених підозрюваними у спамерстві (на підставі чорного списку Akismet)',
+);
+
