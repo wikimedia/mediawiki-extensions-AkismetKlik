@@ -155,6 +155,13 @@ $messages['pms'] = array(
 	'akismetklik-desc' => "A arfuda le modìfiche dai sospet spantia rumenta ëd coment ch'a son ëdzora a la lista nèira d'Akismet",
 );
 
+/** Russian (русский)
+ * @author DCamer
+ */
+$messages['ru'] = array(
+	'akismetklik-desc' => 'Отвергает правки подозреваемых в спаме комментариев на основе антиспам-списка',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
