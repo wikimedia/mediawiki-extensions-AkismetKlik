@@ -155,6 +155,13 @@ $messages['pms'] = array(
 	'akismetklik-desc' => "A arfuda le modìfiche dai sospet spantia rumenta ëd coment ch'a son ëdzora a la lista nèira d'Akismet",
 );
 
+/** Portuguese (português)
+ * @author SandroHc
+ */
+$messages['pt'] = array(
+	'akismetklik-desc' => 'Rejeita edições de comentários suspeitos na lista negra de Akismet',
+);
+
 /** Russian (русский)
  * @author DCamer
  */
