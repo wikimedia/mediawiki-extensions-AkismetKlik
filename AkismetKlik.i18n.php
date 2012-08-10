@@ -53,7 +53,7 @@ $messages['da'] = array(
  * @author Kghbln
  */
 $messages['de'] = array(
-	'akismetklik-desc' => 'Unterbindet Bearbeitungen durch vermutliche Kommentarspammer, die sich auf der Akismet-Blacklist befinden',
+	'akismetklik-desc' => 'Verhindert Bearbeitungen vermutlicher Kommentarspammer, die in der Negativliste von Akismet enthalten sind',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -181,6 +181,13 @@ $messages['pt'] = array(
  */
 $messages['ru'] = array(
 	'akismetklik-desc' => 'Отвергает правки подозреваемых в спаме комментариев на основе антиспам-списка',
+);
+
+/** Swedish (svenska)
+ * @author Ainali
+ */
+$messages['sv'] = array(
+	'akismetklik-desc' => 'Stoppar redigeringar som misstänks komma från kommentarspammare som finns på Akismets svartlista',
 );
 
 /** Tagalog (Tagalog)
