@@ -42,6 +42,13 @@ $messages['be-tarask'] = array(
 	'akismetklik-desc' => 'Адхіляе рэдагаваньні ад падазроных спамэраў у камэнтарах паводле чорнага сьпісу Akismet',
 );
 
+/** Danish (dansk)
+ * @author Hylle
+ */
+$messages['da'] = array(
+	'akismetklik-desc' => "Afviser redigeringer fra mistænkte kommentar spammere på Akismet's sortliste",
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
@@ -96,6 +103,13 @@ $messages['hsb'] = array(
  */
 $messages['ia'] = array(
 	'akismetklik-desc' => 'Rejecta modificationes ab origines de spam de commentos suspectate per le lista nigre de Akismet',
+);
+
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'akismetklik-desc' => 'Menolak suntingan dari terduga pembuat komentar sampah di daftar hitam Akismet',
 );
 
 /** Italian (italiano)
