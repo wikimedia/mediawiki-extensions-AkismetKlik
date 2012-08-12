@@ -140,6 +140,13 @@ $messages['ksh'] = array(
 	'akismetklik-desc' => 'Hält Änderunge op fun, wat mer jläuve, dadd_et Kommenta-SPAMmere sin künnte, opjrond fun däm Akismet sing „schwaze Leß“.',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'akismetklik-desc' => "Refuséiert Ännerunge vu verdächtege Spammere vum Akismet enger ''Schwaarzer Lëscht''",
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
