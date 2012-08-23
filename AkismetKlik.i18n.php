@@ -190,6 +190,13 @@ $messages['pt'] = array(
 	'akismetklik-desc' => 'Rejeita edições de comentários suspeitos na lista negra de Akismet',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'akismetklik-desc' => "Rifiute le cangiaminde da commende sospette de munnezzare sus 'a lista gnore de Akismet",
+);
+
 /** Russian (русский)
  * @author DCamer
  */
