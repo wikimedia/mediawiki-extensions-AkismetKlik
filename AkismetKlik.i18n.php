@@ -225,3 +225,10 @@ $messages['uk'] = array(
 	'akismetklik-desc' => 'Скасування змін, зроблених підозрюваними у спамерстві (на підставі чорного списку Akismet)',
 );
 
+/** Waray (Winaray)
+ * @author Harvzsf
+ */
+$messages['war'] = array(
+	'akismetklik-desc' => 'Nagbabaribad hin mga pagliwat tikang hin mga nahunahunaan nga mga spammer hin comment dida han kan Akismet blacklist',
+);
+
