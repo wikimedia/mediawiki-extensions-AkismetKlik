@@ -35,7 +35,7 @@ $messages['ast'] = array(
 	'akismetklik-desc' => "Refuga les ediciones de sospechosos de facer spam nos comentarios de la llista prieta d'Akismet",
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
