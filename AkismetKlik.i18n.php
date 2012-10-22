@@ -16,7 +16,8 @@ $messages['en'] = array(
 	'akismetklik-desc' => "Rejects edits from suspected comment spammers on Akismet's blacklist",
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ */
 $messages['qqq'] = array(
 	'akismetklik-desc' => '{{desc}}',
 );
@@ -231,4 +232,3 @@ $messages['uk'] = array(
 $messages['war'] = array(
 	'akismetklik-desc' => 'Nagbabaribad hin mga pagliwat tikang hin mga nahunahunaan nga mga spammer hin comment dida han kan Akismet blacklist',
 );
-
