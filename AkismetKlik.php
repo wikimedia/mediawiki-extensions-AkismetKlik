@@ -99,9 +99,6 @@ class AkismetKlik {
 		if ( strlen( $wgAKkey ) == 0 ) {
 			throw new MWException( "Set $wgAKkey" );
 		}
-		if ( strlen( $wgAKkey ) == 0 ) {
-			throw new MWException( "Set $wgAKkey" );
-		}
 
 		wfProfileIn( __METHOD__ );
 
@@ -128,7 +125,7 @@ class AkismetKlik {
 		}
 		$akismet = new Akismet( $wgAKSiteUrl, $wgAKkey );
 		$akismet->setCommentAuthor( $user );
-		$akismet->setCommentAuthorEmail( $wgUser->mEmail );
+		$akismet->setCommentAuthorEmail( $wgUser->getEmail() );
 		$akismet->setCommentAuthorURL( $links );
 		$akismet->setCommentContent( $text );
 		$akismet->setCommentType( "wiki" );
