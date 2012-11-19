@@ -162,6 +162,12 @@ $messages['mk'] = array(
 	'akismetklik-desc' => 'Отфрла уредувања од осомничени спамери заведени на црниот список на Akismet',
 );
 
+/** Norwegian Bokmål (norsk (bokmål)‎)
+ */
+$messages['nb'] = array(
+	'akismetklik-desc' => 'Stopper redigeringer fra kommentarspammere på Akismets svarteliste',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
