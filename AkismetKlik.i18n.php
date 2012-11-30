@@ -78,6 +78,13 @@ $messages['es'] = array(
 	'akismetklik-desc' => 'Rechaza las modificaciones de los spammers presunto comentario en lista negra de Akismet',
 );
 
+/** Finnish (suomi)
+ * @author Nedergard
+ */
+$messages['fi'] = array(
+	'akismetklik-desc' => 'Hylkää muokkaukset epäillyltä Akismet-mustanlistan kommenttiroskapostittajilta.',
+);
+
 /** French (français)
  * @author Gomoko
  */
