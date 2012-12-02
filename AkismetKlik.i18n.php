@@ -80,9 +80,10 @@ $messages['es'] = array(
 
 /** Finnish (suomi)
  * @author Nedergard
+ * @author Nike
  */
 $messages['fi'] = array(
-	'akismetklik-desc' => 'Hylkää muokkaukset epäillyltä Akismet-mustanlistan kommenttiroskapostittajilta.',
+	'akismetklik-desc' => 'Hylkää muokkaukset Akismet-estolistan epäillyiltä roskapostittajilta.',
 );
 
 /** French (français)
