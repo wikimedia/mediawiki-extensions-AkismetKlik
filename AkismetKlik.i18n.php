@@ -17,9 +17,10 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'akismetklik-desc' => '{{desc}}',
+	'akismetklik-desc' => '{{desc|name=Akismet Klik}}',
 );
 
 /** Arabic (العربية)
@@ -168,6 +169,13 @@ $messages['lb'] = array(
  */
 $messages['mk'] = array(
 	'akismetklik-desc' => 'Отфрла уредувања од осомничени спамери заведени на црниот список на Akismet',
+);
+
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'akismetklik-desc' => 'Menolak suntingan daripada spammer komen yang disyaki dalam senarai hitam Akismet',
 );
 
 /** Norwegian Bokmål (norsk (bokmål)‎)
