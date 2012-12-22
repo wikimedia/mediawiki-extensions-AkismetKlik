@@ -51,6 +51,13 @@ $messages['ca'] = array(
 	'akismetklik-desc' => "Rebutja edicions provinents de suposats creadors de correu brossa presents a la llista negra de n'Akismet",
 );
 
+/** Czech (česky)
+ * @author Paxt
+ */
+$messages['cs'] = array(
+	'akismetklik-desc' => 'Odmítá úpravy od podezřelých spamerů z Akismetovy černé listiny',
+);
+
 /** Danish (dansk)
  * @author Hylle
  */
@@ -70,6 +77,13 @@ $messages['de'] = array(
  */
 $messages['dsb'] = array(
 	'akismetklik-desc' => 'Zajźujo změnam wót nejskerjejšych spamowarjow komentarow na cornej lisćinje Akismeta',
+);
+
+/** Esperanto (Esperanto)
+ * @author Blahma
+ */
+$messages['eo'] = array(
+	'akismetklik-desc' => 'Rifuzas redaktojn de suspektataj komentospamistoj sur la nigra listo de Akismet',
 );
 
 /** Spanish (español)
