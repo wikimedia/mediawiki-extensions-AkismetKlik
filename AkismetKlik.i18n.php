@@ -37,6 +37,13 @@ $messages['ast'] = array(
 	'akismetklik-desc' => "Refuga les ediciones de sospechosos de facer spam nos comentarios de la llista prieta d'Akismet",
 );
 
+/** Bashkir (башҡортса)
+ * @author Sagan
+ */
+$messages['ba'] = array(
+	'akismetklik-desc' => 'Анти-спам исемлеге нигеҙендә спам комментарий булған шикле төҙәтеүҙәрҙе кире ҡаға.',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
