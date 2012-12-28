@@ -37,6 +37,13 @@ $messages['ast'] = array(
 	'akismetklik-desc' => "Refuga les ediciones de sospechosos de facer spam nos comentarios de la llista prieta d'Akismet",
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'akismetklik-desc' => 'Akismet-ین قره‌لیستینده اولان نظر اسپمرلرین شوبهه‌لی دَییشدیرمه‌لرینی رد ائت',
+);
+
 /** Bashkir (башҡортса)
  * @author Sagan
  */
@@ -183,6 +190,13 @@ $messages['ksh'] = array(
  */
 $messages['lb'] = array(
 	'akismetklik-desc' => "Refuséiert Ännerunge vu verdächtege Spammere vum Akismet enger ''Schwaarzer Lëscht''",
+);
+
+/** Basa Banyumasan (Basa Banyumasan)
+ * @author StefanusRA
+ */
+$messages['map-bms'] = array(
+	'akismetklik-desc' => 'Tolak suntingan sekang sing deduga cokan nggawe komentar sampah nang daptar irenge Akismet',
 );
 
 /** Macedonian (македонски)
