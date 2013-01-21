@@ -289,3 +289,10 @@ $messages['uk'] = array(
 $messages['war'] = array(
 	'akismetklik-desc' => 'Nagbabaribad hin mga pagliwat tikang hin mga nahunahunaan nga mga spammer hin comment dida han kan Akismet blacklist',
 );
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'akismetklik-desc' => '拒绝在Akismet屏蔽名单上的疑似垃圾信息制造者的编辑',
+);
