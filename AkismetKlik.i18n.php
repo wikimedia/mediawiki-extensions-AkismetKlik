@@ -175,7 +175,7 @@ $messages['ja'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'akismetklik-desc' => 'Akismet의 차단 목록에 의심되는 덧글을 다는 스패머로부터 편집 거부',
+	'akismetklik-desc' => 'Akismet의 차단 목록에 의심되는 덧글을 다는 스패머로부터 편집을 거부합니다',
 );
 
 /** Colognian (Ripoarisch)
