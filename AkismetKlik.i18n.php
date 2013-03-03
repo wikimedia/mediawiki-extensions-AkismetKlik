@@ -58,6 +58,13 @@ $messages['be-tarask'] = array(
 	'akismetklik-desc' => 'Адхіляе рэдагаваньні ад падазроных спамэраў у камэнтарах паводле чорнага сьпісу Akismet',
 );
 
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'akismetklik-desc' => "Disteuler a ra kemmoù an implijerien zo disfiz warno da vezañ kaserien strob war listenn zu Akismet's",
+);
+
 /** Catalan (català)
  * @author Oç
  */
