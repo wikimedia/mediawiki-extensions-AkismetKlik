@@ -51,6 +51,13 @@ $messages['ba'] = array(
 	'akismetklik-desc' => 'Анти-спам исемлеге нигеҙендә спам комментарий булған шикле төҙәтеүҙәрҙе кире ҡаға.',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'akismetklik-desc' => 'Minasayuma nin mga pagliwat gikan sa suspetsadong mga tagapadarang komentaryo sa Akismet kan itom na listahan.',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
