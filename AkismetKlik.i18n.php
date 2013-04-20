@@ -55,7 +55,7 @@ $messages['ba'] = array(
  * @author Geopoet
  */
 $messages['bcl'] = array(
-	'akismetklik-desc' => 'Minasayuma nin mga pagliwat gikan sa suspetsadong mga tagapadarang komentaryo sa Akismet kan itom na listahan.',
+	'akismetklik-desc' => 'Minasayuma nin mga pagliwat gikan sa suspetsadong mga tagapagpadarang komentaryo sa listahan nin pinagbara kan Akismet',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
