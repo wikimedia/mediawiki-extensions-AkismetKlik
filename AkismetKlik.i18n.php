@@ -297,6 +297,13 @@ $messages['uk'] = array(
 	'akismetklik-desc' => 'Скасування змін, зроблених підозрюваними у спамерстві (на підставі чорного списку Akismet)',
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Tuankiet65
+ */
+$messages['vi'] = array(
+	'akismetklik-desc' => 'Từ chối các sửa đổi từ các kẻ nghi ngờ gửi thư rác trên danh sách đen của Akismet',
+);
+
 /** Waray (Winaray)
  * @author Harvzsf
  */
