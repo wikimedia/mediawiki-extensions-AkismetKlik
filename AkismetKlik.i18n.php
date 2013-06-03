@@ -227,7 +227,7 @@ $messages['ms'] = array(
 	'akismetklik-desc' => 'Menolak suntingan daripada spammer komen yang disyaki dalam senarai hitam Akismet',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  */
 $messages['nb'] = array(
 	'akismetklik-desc' => 'Stopper redigeringer fra kommentarspammere på Akismets svarteliste',
