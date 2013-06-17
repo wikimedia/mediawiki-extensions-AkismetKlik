@@ -317,3 +317,10 @@ $messages['war'] = array(
 $messages['zh-hans'] = array(
 	'akismetklik-desc' => '拒绝在Akismet屏蔽名单上的疑似垃圾信息制造者的编辑',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
+ */
+$messages['zh-hant'] = array(
+	'akismetklik-desc' => '拒絕於Akismet黑名單上疑似濫發訊息制造者的編輯',
+);
