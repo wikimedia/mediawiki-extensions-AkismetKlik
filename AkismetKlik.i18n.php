@@ -283,6 +283,13 @@ $messages['ru'] = array(
 	'akismetklik-desc' => 'Отвергает правки подозреваемых в спаме комментариев на основе антиспам-списка',
 );
 
+/** Slovak (slovenčina)
+ * @author Sudo77(new)
+ */
+$messages['sk'] = array(
+	'akismetklik-desc' => 'Odmieta úpravy od podozrivých spamerov z Akismetovej čiernej listiny',
+);
+
 /** Swedish (svenska)
  * @author Ainali
  */
