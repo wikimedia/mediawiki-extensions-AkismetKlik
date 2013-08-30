@@ -136,6 +136,13 @@ $messages['fi'] = array(
 	'akismetklik-desc' => 'Hylkää muokkaukset Akismet-estolistan epäillyiltä roskapostittajilta.',
 );
 
+/** Faroese (føroyskt)
+ * @author EileenSanda
+ */
+$messages['fo'] = array(
+	'akismetklik-desc' => 'Støðgar rættingum frá mistonktum viðmerkingarspammara, sum er at finna á svartalista hjá Akismet',
+);
+
 /** French (français)
  * @author Gomoko
  */
