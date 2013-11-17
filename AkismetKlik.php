@@ -45,18 +45,6 @@ function wfAkismetKlikObject() {
 }
 
 /**
- * Hook function for $wgFilterCallback
- * @param $title Title
- * @param $text string
- * @param $section
- * @return bool
- */
-function wfAkismetFilter( &$title, $text, $section ) {
-	$spamObj = wfAkismetKlikObject();
-	return $spamObj->filter( $title, $text, $section );
-}
-
-/**
  * Hook function for EditFilterMerged, replaces wfAkismetFilter
  * @param $editPage EditPage
  * @param $text string
@@ -88,12 +76,12 @@ class AkismetKlik {
 	 * @param Title $title
 	 * @param string $text Text of section, or entire text if $editPage!=false
 	 * @param string $section Section number or name
-	 * @param EditPage|bool $editPage EditPage if EditFilterMerged was called, false otherwise
+	 * @param EditPage $editPage EditPage passed from EditFilterMerged
 	 * @throws MWException
 	 * @return bool True if the edit should not be allowed, false otherwise
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
-	function filter( &$title, $text, $section, $editPage = false ) {
+	function filter( &$title, $text, $section, $editPage ) {
 		global $wgParser, $wgUser, $wgAKSiteUrl, $wgAKkey, $IP;
 
 		if ( strlen( $wgAKkey ) == 0 ) {
@@ -105,16 +93,9 @@ class AkismetKlik {
 		$text = str_replace( '.', '.', $text );
 
 		# Run parser to strip SGML comments and such out of the markup
-		if ( $editPage ) {
-			$editInfo = $editPage->getArticle()->prepareTextForEdit( $text );
-			$out = $editInfo->output;
-			$pgtitle = $title;
-		} else {
-			$options = new ParserOptions();
-			$text = $wgParser->preSaveTransform( $text, $title, $wgUser, $options );
-			$out = $wgParser->parse( $text, $title, $options );
-			$pgtitle = "";
-		}
+		$editInfo = $editPage->getArticle()->prepareTextForEdit( $text );
+		$out = $editInfo->output;
+		$pgtitle = $title;
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 
 		# Do the match
@@ -132,7 +113,7 @@ class AkismetKlik {
 		$akismet->setPermalink( $wgAKSiteUrl . '/wiki/' . $pgtitle );
 		if ( $akismet->isCommentSpam() && !$wgUser->isAllowed( 'bypassakismet' ) ) {
 			wfDebugLog( 'AkismetKlik', "Match!\n" );
-			EditPage::spamPage( "http://akismet.com blacklist error" );
+			$editPage->spamPageWithContent( "http://akismet.com blacklist error" );
 			wfProfileOut( __METHOD__ );
 			return true;
 		}
