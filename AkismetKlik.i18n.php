@@ -150,6 +150,13 @@ $messages['fr'] = array(
 	'akismetklik-desc' => "Rejette les modifications provenant de soupçonnés pollueurs de commentaires dans la liste noire d'Akismet",
 );
 
+/** Northern Frisian (Nordfriisk)
+ * @author Murma174
+ */
+$messages['frr'] = array(
+	'akismetklik-desc' => 'Ferhanert det bewerkin faan brükern, diar üüb det suartlist faan Akismet stun',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
