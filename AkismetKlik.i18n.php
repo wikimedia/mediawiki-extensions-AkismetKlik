@@ -318,6 +318,13 @@ $messages['tl'] = array(
 	'akismetklik-desc' => 'Tinatanggihan ang mga pagbabago mula sa mga pinaghihinalaang mga tagapagbuhos ng basurang kumento na nasa isang talaan ng mga pinagbabawalan ng Akismet',
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'akismetklik-desc' => "Akismet'in kara listesindeki şüpheli yorum spamcilerinden gelen değişiklikleri reddeder",
+);
+
 /** Ukrainian (українська)
  * @author Olvin
  */
