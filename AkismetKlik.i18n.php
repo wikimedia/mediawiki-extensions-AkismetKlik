@@ -79,7 +79,7 @@ $messages['ca'] = array(
 	'akismetklik-desc' => "Rebutja edicions provinents de suposats creadors de correu brossa presents a la llista negra de n'Akismet",
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Paxt
  */
 $messages['cs'] = array(
