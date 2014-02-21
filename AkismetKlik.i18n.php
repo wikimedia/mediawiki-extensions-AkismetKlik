@@ -297,6 +297,13 @@ $messages['ru'] = array(
 	'akismetklik-desc' => 'Отвергает правки подозреваемых в спаме комментариев на основе антиспам-списка',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'akismetklik-desc' => "Rejects edits fae suspected comment spammers on Akismet's blaickleet",
+);
+
 /** Slovak (slovenčina)
  * @author Sudo77(new)
  */
