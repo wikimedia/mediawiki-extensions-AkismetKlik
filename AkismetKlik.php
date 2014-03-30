@@ -16,6 +16,7 @@ $wgExtensionCredits['other'][] = array(
 );
 
 $dir = dirname( __FILE__ ) . '/';
+$wgMessagesDirs['AkismetKlik'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['AkismetKlik'] = $dir . 'AkismetKlik.i18n.php';
 
 # Set site-specific configuration values
