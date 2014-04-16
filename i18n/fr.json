@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gomoko"
-        ]
-    },
-    "akismetklik-desc": "Rejette les modifications provenant de soupçonnés pollueurs de commentaires dans la liste noire d'Akismet"
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"akismetklik-desc": "Rejette les modifications provenant de soupçonnés pollueurs de commentaires dans la liste noire d'Akismet"
 }

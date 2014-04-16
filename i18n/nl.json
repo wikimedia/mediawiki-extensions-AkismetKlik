@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Siebrand"
-        ]
-    },
-    "akismetklik-desc": "Voorkomt bewerkingen van spammers in reacties via Akismet's blacklist"
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"akismetklik-desc": "Voorkomt bewerkingen van spammers in reacties via Akismet's blacklist"
 }

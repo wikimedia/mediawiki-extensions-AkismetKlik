@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joseph"
-        ]
-    },
-    "akismetklik-desc": "Akismet'in kara listesindeki şüpheli yorum spamcilerinden gelen değişiklikleri reddeder"
+	"@metadata": {
+		"authors": [
+			"Joseph"
+		]
+	},
+	"akismetklik-desc": "Akismet'in kara listesindeki şüpheli yorum spamcilerinden gelen değişiklikleri reddeder"
 }
