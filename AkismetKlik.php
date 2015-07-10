@@ -82,7 +82,7 @@ class AkismetKlik {
 	 * @return bool True if the edit should not be allowed, false otherwise
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
-	function filter( &$title, $text, $section, $editPage ) {
+	function filter( $title, $text, $section, $editPage ) {
 		global $wgParser, $wgUser, $wgAKSiteUrl, $wgAKkey, $IP;
 
 		if ( strlen( $wgAKkey ) == 0 ) {
