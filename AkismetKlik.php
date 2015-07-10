@@ -86,7 +86,7 @@ class AkismetKlik {
 		global $wgParser, $wgUser, $wgAKSiteUrl, $wgAKkey, $IP;
 
 		if ( strlen( $wgAKkey ) == 0 ) {
-			throw new MWException( "Set $wgAKkey" );
+			throw new MWException( 'Set $wgAKkey in LocalSettings.php or relevant configuration file.' );
 		}
 
 		wfProfileIn( __METHOD__ );
