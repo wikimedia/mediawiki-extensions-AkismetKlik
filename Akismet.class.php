@@ -3,15 +3,21 @@
 /**
  * Akismet anti-comment spam service
  *
- * The class in this package allows use of the {@link http://akismet.com Akismet} anti-comment spam service in any PHP5 application.
+ * The class in this package allows use of the {@link http://akismet.com Akismet}
+ * anti-comment spam service in any PHP5 application.
  *
- * This service performs a number of checks on submitted data and returns whether or not the data is likely to be spam.
+ * This service performs a number of checks on submitted data and returns
+ * whether or not the data is likely to be spam.
  *
- * Please note that in order to use this class, you must have a vaild {@link http://wordpress.com/api-keys/ WordPress API key}.  They are free for non/small-profit types and getting one will only take a couple of minutes.
+ * Please note that in order to use this class, you must have a vaild
+ * {@link http://wordpress.com/api-keys/ WordPress API key}.  They are free for
+ * non/small-profit types and getting one will only take a couple of minutes.
  *
- * For commercial use, please {@link http://akismet.com/commercial/ visit the Akismet commercial licensing page}.
+ * For commercial use, please {@link http://akismet.com/commercial/ visit the
+ * Akismet commercial licensing page}.
  *
- * Please be aware that this class is PHP5 only.  Attempts to run it under PHP4 will most likely fail.
+ * Please be aware that this class is PHP5 only.  Attempts to run it under PHP4
+ * will most likely fail.
  *
  * See the Akismet class documentation page linked to below for usage information.
  *
@@ -25,7 +31,9 @@
 /**
  * The Akismet PHP5 Class
  *
- * This class takes the functionality from the Akismet WordPress plugin written by {@link http://photomatt.net/ Matt Mullenweg} and allows it to be integrated into any PHP5 application or website.
+ * This class takes the functionality from the Akismet WordPress plugin written
+ * by {@link http://photomatt.net/ Matt Mullenweg} and allows it to be integrated
+ * into any PHP5 application or website.
  *
  * The original plugin is {@link http://akismet.com/download/ available on the Akismet website}.
  *
@@ -86,8 +94,8 @@ class Akismet {
 		'PHP_SELF' );
 
 	/**
-	 * @param    string    $blogURL            The URL of your blog.
-	 * @param    string    $wordPressAPIKey    WordPress API key.
+	 * @param    string $blogURL The URL of your blog.
+	 * @param    string $wordPressAPIKey WordPress API key.
 	 */
 	public function __construct( $blogURL, $wordPressAPIKey ) {
 		$this->blogURL = $blogURL;
@@ -134,7 +142,9 @@ class Akismet {
 	 */
 	public function isKeyValid() {
 		// Check to see if the key is valid
-		$response = $this->sendRequest( 'key=' . $this->wordPressAPIKey . '&blog=' . $this->blogURL, $this->akismetServer, '/' . $this->akismetVersion . '/verify-key' );
+		$response = $this->sendRequest( 'key=' . $this->wordPressAPIKey .
+			'&blog=' . $this->blogURL, $this->akismetServer, '/' . $this->akismetVersion . '/verify-key' );
+
 		return $response[1] == 'valid';
 	}
 
@@ -189,16 +199,22 @@ class Akismet {
 	/**
 	 * Tests for spam.
 	 *
-	 * Uses the web service provided by {@link http://www.akismet.com Akismet} to see whether or not the submitted comment is spam.  Returns a boolean value.
+	 * Uses the web service provided by {@link http://www.akismet.com Akismet}
+	 * to see whether or not the submitted comment is spam.  Returns a boolean value.
 	 *
-	 * @return    bool    True if the comment is spam, false if not
-	 * @throws    MWException Will throw an exception if the API key passed to the constructor is invalid.
+	 * @return bool True if the comment is spam, false if not
+	 * @throws MWException Will throw an exception if the API key passed to the
+	 *   constructor is invalid.
 	 */
 	public function isCommentSpam() {
-		$response = $this->sendRequest( $this->getQueryString(), $this->wordPressAPIKey . '.rest.akismet.com', '/' . $this->akismetVersion . '/comment-check' );
+		$response = $this->sendRequest(
+			$this->getQueryString(),
+			$this->wordPressAPIKey . '.rest.akismet.com', '/' . $this->akismetVersion . '/comment-check'
+		);
 
 		if ( $response[1] == 'invalid' && !$this->isKeyValid() ) {
-			throw new MWException( 'The Wordpress API key passed to the Akismet constructor is invalid.  Please obtain a valid one from http://wordpress.com/api-keys/' );
+			throw new MWException( 'The Wordpress API key passed to the Akismet ' .
+				'constructor is invalid. Please obtain a valid one from http://wordpress.com/api-keys/' );
 		}
 
 		return ( $response[1] == 'true' );
@@ -207,25 +223,31 @@ class Akismet {
 	/**
 	 * Submit spam that is incorrectly tagged as ham.
 	 *
-	 * Using this function will make you a good citizen as it helps Akismet to learn from its mistakes.  This will improve the service for everybody.
+	 * Using this function will make you a good citizen as it helps Akismet to
+	 * learn from its mistakes.  This will improve the service for everybody.
 	 */
 	public function submitSpam() {
-		$this->sendRequest( $this->getQueryString(), $this->wordPressAPIKey . '.' . $this->akismetServer, '/' . $this->akismetVersion . '/submit-spam' );
+		$this->sendRequest(
+			$this->getQueryString(),
+			$this->wordPressAPIKey . '.' . $this->akismetServer, '/' . $this->akismetVersion . '/submit-spam'
+		);
 	}
 
 	/**
 	 * Submit ham that is incorrectly tagged as spam.
 	 *
-	 * Using this function will make you a good citizen as it helps Akismet to learn from its mistakes.  This will improve the service for everybody.
+	 * Using this function will make you a good citizen as it helps Akismet
+	 * to learn from its mistakes.  This will improve the service for everybody.
 	 */
 	public function submitHam() {
-		$this->sendRequest( $this->getQueryString(), $this->wordPressAPIKey . '.' . $this->akismetServer, '/' . $this->akismetVersion . '/submit-ham' );
+		$this->sendRequest( $this->getQueryString(), $this->wordPressAPIKey .
+			'.' . $this->akismetServer, '/' . $this->akismetVersion . '/submit-ham' );
 	}
 
 	/**
 	 * To override the user IP address when submitting spam/ham later on
 	 *
-	 * @param string $userip    An IP address.  Optional.
+	 * @param string $userip An IP address.  Optional.
 	 */
 	public function setUserIP( $userip ) {
 		$this->comment['user_ip'] = $userip;
@@ -234,7 +256,7 @@ class Akismet {
 	/**
 	 * To override the referring page when submitting spam/ham later on
 	 *
-	 * @param string $referrer    The referring page.  Optional.
+	 * @param string $referrer The referring page.  Optional.
 	 */
 	public function setReferrer( $referrer ) {
 		$this->comment['referrer'] = $referrer;
@@ -243,7 +265,7 @@ class Akismet {
 	/**
 	 * A permanent URL referencing the blog post the comment was submitted to.
 	 *
-	 * @param string $permalink    The URL.  Optional.
+	 * @param string $permalink The URL.  Optional.
 	 */
 	public function setPermalink( $permalink ) {
 		$this->comment['permalink'] = $permalink;
@@ -341,9 +363,12 @@ class Akismet {
 /**
  * Used internally by Akismet
  *
- * This class is used by Akismet to do the actual sending and receiving of data.  It opens a connection to a remote host, sends some data and the reads the response and makes it available to the calling program.
+ * This class is used by Akismet to do the actual sending and receiving of data.
+ * It opens a connection to a remote host, sends some data and the reads the
+ * response and makes it available to the calling program.
  *
- * The code that makes up this class originates in the Akismet WordPress plugin, which is {@link http://akismet.com/download/ available on the Akismet website}.
+ * The code that makes up this class originates in the Akismet WordPress plugin,
+ * which is {@link http://akismet.com/download/ available on the Akismet website}.
  *
  * N.B. It is not necessary to call this class directly to use the Akismet class.
  *
@@ -366,10 +391,10 @@ class SocketWriteRead implements AkismetRequestSender {
 	/**
 	 *  Sends the data to the remote host.
 	 *
-	 * @param    string    $host            The host to send/receive data.
-	 * @param    int        $port            The port on the remote host.
-	 * @param    string    $request        The data to send.
-	 * @param    int        $responseLength    The amount of data to read.  Defaults to 1160 bytes.
+	 * @param    string $host The host to send/receive data.
+	 * @param    int $port The port on the remote host.
+	 * @param    string $request The data to send.
+	 * @param    int $responseLength The amount of data to read.  Defaults to 1160 bytes.
 	 * @throws    MWException An exception is thrown if a connection cannot be made to the remote host.
 	 * @return    string The server response
 	 */
@@ -379,11 +404,14 @@ class SocketWriteRead implements AkismetRequestSender {
 		$fs = fsockopen( $host, $port, $this->errorNumber, $this->errorString, 3 );
 
 		if ( $this->errorNumber != 0 ) {
-			throw new MWException( 'Error connecting to host: ' . $host . ' Error number: ' . $this->errorNumber . ' Error message: ' . $this->errorString );
+			throw new MWException( 'Error connecting to host: ' . $host .
+				' Error number: ' . $this->errorNumber . ' Error message: ' . $this->errorString );
 		}
 
 		if ( $fs !== false ) {
-			@fwrite( $fs, $request );
+			MediaWiki\suppressWarnings();
+			fwrite( $fs, $request );
+			MediaWiki\restoreWarnings();
 
 			while ( !feof( $fs ) ) {
 				$response .= fgets( $fs, $responseLength );
@@ -466,10 +494,10 @@ interface AkismetRequestSender {
 	/**
 	 *  Sends the data to the remote host.
 	 *
-	 * @param    string    $host            The host to send/receive data.
-	 * @param    int        $port            The port on the remote host.
-	 * @param    string    $request        The data to send.
-	 * @param    int        $responseLength    The amount of data to read.  Defaults to 1160 bytes.
+	 * @param    string $host The host to send/receive data.
+	 * @param    int $port The port on the remote host.
+	 * @param    string $request The data to send.
+	 * @param    int $responseLength The amount of data to read.  Defaults to 1160 bytes.
 	 * @throws    MWException An exception is thrown if a connection cannot be made to the remote host.
 	 * @return string    The server response
 	 */

@@ -4,9 +4,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 # Include PHP5 Akismet class from http://www.achingbrain.net/stuff/akismet (GPL)
-require_once( 'Akismet.class.php' );
+require_once 'Akismet.class.php';
 
-#Extension credits
+# Extension credits
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'AkismetKlik',
@@ -15,17 +15,14 @@ $wgExtensionCredits['other'][] = array(
 	'descriptionmsg' => 'akismetklik-desc',
 );
 
-$dir = dirname( __FILE__ ) . '/';
 $wgMessagesDirs['AkismetKlik'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['AkismetKlik'] = $dir . 'AkismetKlik.i18n.php';
 
 # Set site-specific configuration values
 $wgAKkey = '';
 $wgAKSiteUrl = '';
 
-#
 # MediaWiki hooks
-#
+
 # Loader for spam blacklist feature
 # Include this from LocalSettings.php
 $wgHooks['EditFilterMerged'][] = 'wfAkismetFilterMerged';
@@ -42,6 +39,7 @@ function wfAkismetKlikObject() {
 		$spamObj = new AkismetKlik( $wgSpamBlacklistSettings );
 		$spamObj->previousFilter = $wgPreSpamFilterCallback;
 	}
+
 	return $spamObj;
 }
 
@@ -54,6 +52,7 @@ function wfAkismetKlikObject() {
 function wfAkismetFilterMerged( $editPage, $text ) {
 	$spamObj = new AkismetKlik();
 	$ret = $spamObj->filter( $editPage->getArticle()->getTitle(), $text, '', $editPage );
+
 	return !$ret;
 }
 
@@ -61,7 +60,6 @@ function wfAkismetFilterMerged( $editPage, $text ) {
  * This class provides the interface to the filters
  */
 class AkismetKlik {
-
 	public $previousFilter;
 
 	/**
@@ -83,7 +81,10 @@ class AkismetKlik {
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
 	function filter( $title, $text, $section, $editPage ) {
-		global $wgParser, $wgUser, $wgAKSiteUrl, $wgAKkey, $IP;
+		global $wgUser, $wgAKSiteUrl, $wgAKkey;
+		// @codingStandardsIgnoreStart
+		global $IP;
+		// @codingStandardsIgnoreEnd
 
 		if ( strlen( $wgAKkey ) == 0 ) {
 			throw new MWException( 'Set $wgAKkey in LocalSettings.php or relevant configuration file.' );
@@ -100,7 +101,7 @@ class AkismetKlik {
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 
 		# Do the match
-		if ( $wgUser->mName == "" ) {
+		if ( $wgUser->mName == '' ) {
 			$user = $IP;
 		} else {
 			$user = $wgUser->mName;
@@ -110,15 +111,17 @@ class AkismetKlik {
 		$akismet->setCommentAuthorEmail( $wgUser->getEmail() );
 		$akismet->setCommentAuthorURL( $links );
 		$akismet->setCommentContent( $text );
-		$akismet->setCommentType( "wiki" );
+		$akismet->setCommentType( 'wiki' );
 		$akismet->setPermalink( $wgAKSiteUrl . '/wiki/' . $pgtitle );
 		if ( $akismet->isCommentSpam() && !$wgUser->isAllowed( 'bypassakismet' ) ) {
 			wfDebugLog( 'AkismetKlik', "Match!\n" );
-			$editPage->spamPageWithContent( "http://akismet.com blacklist error" );
+			$editPage->spamPageWithContent( 'http://akismet.com blacklist error' );
 			wfProfileOut( __METHOD__ );
+
 			return true;
 		}
 		wfProfileOut( __METHOD__ );
+
 		return false;
 	}
 }
