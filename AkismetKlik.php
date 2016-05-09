@@ -7,13 +7,13 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 require_once 'Akismet.class.php';
 
 # Extension credits
-$wgExtensionCredits['other'][] = array(
+$wgExtensionCredits['other'][] = [
 	'path' => __FILE__,
 	'name' => 'AkismetKlik',
 	'author' => 'Carl Austin Bennett',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:AkismetKlik',
 	'descriptionmsg' => 'akismetklik-desc',
-);
+];
 
 $wgMessagesDirs['AkismetKlik'] = __DIR__ . '/i18n';
 
@@ -65,7 +65,7 @@ class AkismetKlik {
 	/**
 	 * @param $settings array
 	 */
-	function __construct( $settings = array() ) {
+	function __construct( $settings = [] ) {
 		foreach ( $settings as $name => $value ) {
 			$this->$name = $value;
 		}
