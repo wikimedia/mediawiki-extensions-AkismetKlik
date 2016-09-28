@@ -95,7 +95,8 @@ class AkismetKlik {
 		$text = str_replace( '.', '.', $text );
 
 		# Run parser to strip SGML comments and such out of the markup
-		$editInfo = $editPage->getArticle()->prepareTextForEdit( $text );
+		$content = ContentHandler::makeContent( $text, $title );
+		$editInfo = $editPage->getArticle()->prepareContentForEdit( $content );
 		$out = $editInfo->output;
 		$pgtitle = $title;
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
