@@ -25,7 +25,7 @@ $wgAKSiteUrl = '';
 
 # Loader for spam blacklist feature
 # Include this from LocalSettings.php
-$wgHooks['EditFilterMerged'][] = 'wfAkismetFilterMerged';
+$wgHooks['EditFilterMergedContent'][] = 'wfAkismetFilterMergedContent';
 
 /**
  * Get an instance of AkismetKlik and do some first-call initialisation.
@@ -44,14 +44,18 @@ function wfAkismetKlikObject() {
 }
 
 /**
- * Hook function for EditFilterMerged, replaces wfAkismetFilter
- * @param $editPage EditPage
- * @param $text string
+ * Hook function for EditFilterMergedContent, replaces wfAkismetFilter
+ * @param $context IContextSource
+ * @param $content Content
+ * @param $status Status
+ * @param $summary string
+ * @param $user User
+ * @param $minoredit bool
  * @return bool
  */
-function wfAkismetFilterMerged( $editPage, $text ) {
+function wfAkismetFilterMergedContent( $context, $content, $status, $summary, $user, $minoredit ) {
 	$spamObj = new AkismetKlik();
-	$ret = $spamObj->filter( $editPage->getArticle()->getTitle(), $text, '', $editPage );
+	$ret = $spamObj->filter( $context->getTitle(), $content, '', $context->getWikiPage() );
 
 	return !$ret;
 }
@@ -73,14 +77,14 @@ class AkismetKlik {
 
 	/**
 	 * @param Title $title
-	 * @param string $text Text of section, or entire text if $editPage!=false
+	 * @param Content $content Content of section
 	 * @param string $section Section number or name
-	 * @param EditPage $editPage EditPage passed from EditFilterMerged
+	 * @param WikiPage $editPage WikiPage passed from EditFilterMergedContent
 	 * @throws MWException
 	 * @return bool True if the edit should not be allowed, false otherwise
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
-	function filter( $title, $text, $section, $editPage ) {
+	function filter( $title, $content, $section, $wikiPage ) {
 		global $wgUser, $wgAKSiteUrl, $wgAKkey;
 		// @codingStandardsIgnoreStart
 		global $IP;
@@ -92,11 +96,9 @@ class AkismetKlik {
 
 		wfProfileIn( __METHOD__ );
 
-		$text = str_replace( '.', '.', $text );
-
 		# Run parser to strip SGML comments and such out of the markup
-		$content = ContentHandler::makeContent( $text, $title );
-		$editInfo = $editPage->getArticle()->prepareContentForEdit( $content );
+		$text = ContentHandler::getContentText( $content );
+		$editInfo = $wikiPage->prepareContentForEdit( $content );
 		$out = $editInfo->output;
 		$pgtitle = $title;
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
