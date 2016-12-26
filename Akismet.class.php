@@ -9,7 +9,7 @@
  * This service performs a number of checks on submitted data and returns
  * whether or not the data is likely to be spam.
  *
- * Please note that in order to use this class, you must have a vaild
+ * Please note that in order to use this class, you must have a valid
  * {@link http://wordpress.com/api-keys/ WordPress API key}.  They are free for
  * non/small-profit types and getting one will only take a couple of minutes.
  *

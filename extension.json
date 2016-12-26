@@ -1,0 +1,32 @@
+{
+	"name": "AkismetKlik",
+	"author": "Carl Austin Bennett",
+	"url": "https://www.mediawiki.org/wiki/Extension:AkismetKlik",
+	"descriptionmsg": "akismetklik-desc",
+	"type": "other",
+	"config": {
+		"AKSiteUrl": {
+			"value": ""
+		},
+		"AKkey": {
+			"value": ""
+		}
+	},
+	"Hooks": {
+		"EditFilterMergedContent": "AkismetKlik::onAkismetFilterMergedContent"
+	},
+	"MessagesDirs": {
+		"AkismetKlik": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"AkismetKlik": "AkismetKlik_body.php",
+		"Akismet": "Akismet.class.php",
+		"SocketWriteRead": "Akismet.class.php",
+		"SocketWriteReadFactory": "Akismet.class.php",
+		"AkismetRequestSender": "Akismet.class.php",
+		"AkismetRequestFactory": "Akismet.class.php"
+	},
+	"manifest_version": 2
+}
