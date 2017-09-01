@@ -94,8 +94,8 @@ class Akismet {
 		'PHP_SELF' ];
 
 	/**
-	 * @param    string $blogURL The URL of your blog.
-	 * @param    string $wordPressAPIKey WordPress API key.
+	 * @param string $blogURL The URL of your blog.
+	 * @param string $wordPressAPIKey WordPress API key.
 	 */
 	public function __construct( $blogURL, $wordPressAPIKey ) {
 		$this->blogURL = $blogURL;
@@ -138,7 +138,7 @@ class Akismet {
 	 *
 	 * Use this method if you suspect your API key is invalid.
 	 *
-	 * @return bool    True is if the key is valid, false if not.
+	 * @return bool True is if the key is valid, false if not.
 	 */
 	public function isKeyValid() {
 		// Check to see if the key is valid
@@ -391,12 +391,12 @@ class SocketWriteRead implements AkismetRequestSender {
 	/**
 	 *  Sends the data to the remote host.
 	 *
-	 * @param    string $host The host to send/receive data.
-	 * @param    int $port The port on the remote host.
-	 * @param    string $request The data to send.
-	 * @param    int $responseLength The amount of data to read.  Defaults to 1160 bytes.
+	 * @param string $host The host to send/receive data.
+	 * @param int $port The port on the remote host.
+	 * @param string $request The data to send.
+	 * @param int $responseLength The amount of data to read.  Defaults to 1160 bytes.
 	 * @throws    MWException An exception is thrown if a connection cannot be made to the remote host.
-	 * @return    string The server response
+	 * @return string The server response
 	 */
 	public function send( $host, $port, $request, $responseLength = 1160 ) {
 		$response = '';
@@ -426,7 +426,7 @@ class SocketWriteRead implements AkismetRequestSender {
 	/**
 	 * Returns the server response text
 	 *
-	 * @return    string
+	 * @return string
 	 */
 	public function getResponse() {
 		return $this->response;
@@ -494,10 +494,10 @@ interface AkismetRequestSender {
 	/**
 	 *  Sends the data to the remote host.
 	 *
-	 * @param    string $host The host to send/receive data.
-	 * @param    int $port The port on the remote host.
-	 * @param    string $request The data to send.
-	 * @param    int $responseLength The amount of data to read.  Defaults to 1160 bytes.
+	 * @param string $host The host to send/receive data.
+	 * @param int $port The port on the remote host.
+	 * @param string $request The data to send.
+	 * @param int $responseLength The amount of data to read.  Defaults to 1160 bytes.
 	 * @throws    MWException An exception is thrown if a connection cannot be made to the remote host.
 	 * @return string    The server response
 	 */
