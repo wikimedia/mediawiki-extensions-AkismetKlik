@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Erdemaslancan"
+			"Erdemaslancan",
+			"MarcoAurelio"
 		]
 	},
-	"akismetklik-desc": "Rechaza las modificaciones de los spammers presunto comentario en lista negra de Akismet"
+	"akismetklik-desc": "Rechaza las ediciones sospechosas de ser procedentes de ''spammers'' listados en la lista negra de Akismet"
 }
