@@ -6,7 +6,7 @@ class AkismetKlik {
 	public $previousFilter;
 
 	/**
-	 * @param $settings array
+	 * @param array $settings
 	 */
 	function __construct( $settings = [] ) {
 		foreach ( $settings as $name => $value ) {
@@ -16,8 +16,8 @@ class AkismetKlik {
 
 	/**
 	 * Hook function for EditFilterMergedContent, replaces wfAkismetFilter
-	 * @param $context IContextSource
-	 * @param $content Content
+	 * @param IContextSource $context
+	 * @param Content $content
 	 * @return bool
 	 */
 	public static function onAkismetFilterMergedContent( $context, $content ) {

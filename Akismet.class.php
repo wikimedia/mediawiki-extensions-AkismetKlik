@@ -150,9 +150,9 @@ class Akismet {
 
 	/**
 	 * makes a request to the Akismet service
-	 * @param $request
-	 * @param $host
-	 * @param $path
+	 * @param string $request
+	 * @param string $host
+	 * @param string $path
 	 * @return array
 	 */
 	private function sendRequest( $request, $host, $path ) {
@@ -275,7 +275,7 @@ class Akismet {
 	 * The type of comment being submitted.
 	 *
 	 * May be blank, comment, trackback, pingback, or a made up value like "registration" or "wiki".
-	 * @param $commentType
+	 * @param string $commentType
 	 */
 	public function setCommentType( $commentType ) {
 		$this->comment['comment_type'] = $commentType;
@@ -283,7 +283,7 @@ class Akismet {
 
 	/**
 	 * The name that the author submitted with the comment.
-	 * @param $commentAuthor
+	 * @param string $commentAuthor
 	 */
 	public function setCommentAuthor( $commentAuthor ) {
 		$this->comment['comment_author'] = $commentAuthor;
@@ -293,7 +293,7 @@ class Akismet {
 	 * The email address that the author submitted with the comment.
 	 *
 	 * The address is assumed to be valid.
-	 * @param $authorEmail string
+	 * @param string $authorEmail
 	 */
 	public function setCommentAuthorEmail( $authorEmail ) {
 		$this->comment['comment_author_email'] = $authorEmail;
@@ -301,7 +301,7 @@ class Akismet {
 
 	/**
 	 * The URL that the author submitted with the comment.
-	 * @param $authorURL
+	 * @param string $authorURL
 	 */
 	public function setCommentAuthorURL( $authorURL ) {
 		$this->comment['comment_author_url'] = $authorURL;
@@ -309,7 +309,7 @@ class Akismet {
 
 	/**
 	 * The comment's body text.
-	 * @param $commentBody
+	 * @param string $commentBody
 	 */
 	public function setCommentContent( $commentBody ) {
 		$this->comment['comment_content'] = $commentBody;
@@ -319,7 +319,7 @@ class Akismet {
 	 * Lets you override the user agent used to submit the comment.
 	 * you may wish to do this when submitting ham/spam.
 	 * Defaults to $_SERVER['HTTP_USER_AGENT']
-	 * @param $userAgent
+	 * @param string $userAgent
 	 */
 	public function setCommentUserAgent( $userAgent ) {
 		$this->comment['user_agent'] = $userAgent;
@@ -327,7 +327,7 @@ class Akismet {
 
 	/**
 	 * Defaults to 80
-	 * @param $apiPort
+	 * @param string $apiPort
 	 */
 	public function setAPIPort( $apiPort ) {
 		$this->apiPort = $apiPort;
@@ -335,7 +335,7 @@ class Akismet {
 
 	/**
 	 * Defaults to rest.akismet.com
-	 * @param $akismetServer
+	 * @param string $akismetServer
 	 */
 	public function setAkismetServer( $akismetServer ) {
 		$this->akismetServer = $akismetServer;
