@@ -46,8 +46,6 @@ class AkismetKlik {
 			throw new MWException( 'Set $wgAKkey in LocalSettings.php or relevant configuration file.' );
 		}
 
-		wfProfileIn( __METHOD__ );
-
 		# Run parser to strip SGML comments and such out of the markup
 		$text = ContentHandler::getContentText( $content );
 		$editInfo = $wikiPage->prepareContentForEdit( $content );
@@ -70,11 +68,9 @@ class AkismetKlik {
 		if ( $akismet->isCommentSpam() && !$wgUser->isAllowed( 'bypassakismet' ) ) {
 			wfDebugLog( 'AkismetKlik', "Match!\n" );
 			$editInfo->spamPageWithContent( 'http://akismet.com blacklist error' );
-			wfProfileOut( __METHOD__ );
 
 			return true;
 		}
-		wfProfileOut( __METHOD__ );
 
 		return false;
 	}
