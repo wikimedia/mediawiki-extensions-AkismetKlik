@@ -409,9 +409,9 @@ class SocketWriteRead implements AkismetRequestSender {
 		}
 
 		if ( $fs !== false ) {
-			MediaWiki\suppressWarnings();
+			Wikimedia\suppressWarnings();
 			fwrite( $fs, $request );
-			MediaWiki\restoreWarnings();
+			Wikimedia\restoreWarnings();
 
 			while ( !feof( $fs ) ) {
 				$response .= fgets( $fs, $responseLength );
