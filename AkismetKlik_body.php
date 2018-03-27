@@ -37,10 +37,7 @@ class AkismetKlik {
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
 	function filter( $title, $content, $section, $wikiPage ) {
-		global $wgUser, $wgAKSiteUrl, $wgAKkey;
-		// @codingStandardsIgnoreStart
-		global $IP;
-		// @codingStandardsIgnoreEnd
+		global $wgUser, $wgAKSiteUrl, $wgAKkey, $IP;
 
 		if ( strlen( $wgAKkey ) == 0 ) {
 			throw new MWException( 'Set $wgAKkey in LocalSettings.php or relevant configuration file.' );
