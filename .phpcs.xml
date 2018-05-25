@@ -4,7 +4,6 @@
 		<exclude name="Generic.Files.OneObjectStructurePerFile.MultipleFound" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="Squiz.Scope.MethodScope.Missing" />
-		<exclude name="MediaWiki.Commenting.LicenseComment.InvalidLicenseTag" />
 	</rule>
 	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
 		<properties>

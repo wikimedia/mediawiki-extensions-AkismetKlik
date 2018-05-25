@@ -25,7 +25,7 @@
  * @author        Alex Potsides, {@link http://www.achingbrain.net http://www.achingbrain.net}
  * @version        0.5
  * @copyright    Alex Potsides, {@link http://www.achingbrain.net http://www.achingbrain.net}
- * @license        http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @license        http://www.opensource.org/licenses/bsd-license.php BSD-2-Clause
  */
 
 /**
