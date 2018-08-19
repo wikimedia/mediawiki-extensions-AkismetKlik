@@ -79,7 +79,7 @@ class Akismet {
 	private $akismetVersion;
 	private $requestFactory;
 
-	// This prevents some potentially sensitive information from being sent accross the wire.
+	// This prevents some potentially sensitive information from being sent across the wire.
 	private $ignore = [ 'HTTP_COOKIE',
 		'HTTP_X_FORWARDED_FOR',
 		'HTTP_X_FORWARDED_HOST',
