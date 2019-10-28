@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Reza1615"
+			"Reza1615",
+			"Ahmad252"
 		]
 	},
-	"akismetklik-desc": "توقف ویرایش‌های توضیحات مشکوک به اسپم در پالایه خرابکاری Akismet"
+	"akismetklik-desc": "رد کردن ویرایش‌های توضیحات مشکوک به اسپم در فهرست سیاه Akismet"
 }
