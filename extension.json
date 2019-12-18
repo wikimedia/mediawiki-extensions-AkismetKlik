@@ -15,6 +15,7 @@
 			"value": ""
 		}
 	},
+	"license-name": "BSD-2-Clause",
 	"Hooks": {
 		"EditFilterMergedContent": "AkismetKlik::onAkismetFilterMergedContent"
 	},
