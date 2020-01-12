@@ -25,12 +25,12 @@
 		]
 	},
 	"AutoloadClasses": {
-		"AkismetKlik": "AkismetKlik_body.php",
-		"Akismet": "Akismet.class.php",
-		"SocketWriteRead": "Akismet.class.php",
-		"SocketWriteReadFactory": "Akismet.class.php",
-		"AkismetRequestSender": "Akismet.class.php",
-		"AkismetRequestFactory": "Akismet.class.php"
+		"AkismetKlik": "src/AkismetKlik.php",
+		"Akismet": "src/Akismet.php",
+		"SocketWriteRead": "src/SocketWriteRead.php",
+		"SocketWriteReadFactory": "src/SocketWriteReadFactory.php",
+		"AkismetRequestSender": "src/AkismetRequestSender.php",
+		"AkismetRequestFactory": "src/AkismetRequestFactory.php"
 	},
 	"manifest_version": 2
 }
