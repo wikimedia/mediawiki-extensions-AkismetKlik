@@ -28,7 +28,13 @@ class AkismetKlik {
 		}
 
 		$spamObj = new AkismetKlik();
-		$ret = $spamObj->filter( $context->getTitle(), $content, '', $context->getWikiPage() );
+		$ret = $spamObj->filter(
+			$context->getTitle(),
+			$content,
+			'',
+			$context->getWikiPage(),
+			$context->getUser()
+		 );
 
 		return !$ret;
 	}
@@ -38,12 +44,13 @@ class AkismetKlik {
 	 * @param Content $content Content of section
 	 * @param string $section Section number or name
 	 * @param WikiPage $wikiPage WikiPage passed from EditFilterMergedContent
+	 * @param User $user
 	 * @throws MWException
 	 * @return bool True if the edit should not be allowed, false otherwise
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
-	function filter( $title, $content, $section, $wikiPage ) {
-		global $wgUser, $wgAKSiteUrl, $wgAKkey, $IP;
+	function filter( $title, $content, $section, $wikiPage, User $user ) {
+		global $wgAKSiteUrl, $wgAKkey, $IP;
 
 		if ( strlen( $wgAKkey ) == 0 ) {
 			throw new MWException( 'Set $wgAKkey in LocalSettings.php or relevant configuration file.' );
@@ -56,19 +63,19 @@ class AkismetKlik {
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 
 		# Do the match
-		if ( $wgUser->mName == '' ) {
-			$user = $IP;
+		if ( $user->mName == '' ) {
+			$username = $IP;
 		} else {
-			$user = $wgUser->mName;
+			$username = $user->mName;
 		}
 		$akismet = new Akismet( $wgAKSiteUrl, $wgAKkey );
-		$akismet->setCommentAuthor( $user );
-		$akismet->setCommentAuthorEmail( $wgUser->getEmail() );
+		$akismet->setCommentAuthor( $username );
+		$akismet->setCommentAuthorEmail( $user->getEmail() );
 		$akismet->setCommentAuthorURL( $links );
 		$akismet->setCommentContent( $text );
 		$akismet->setCommentType( 'wiki' );
 		$akismet->setPermalink( $wgAKSiteUrl . '/wiki/' . $title );
-		if ( $akismet->isCommentSpam() && !$wgUser->isAllowed( 'bypassakismet' ) ) {
+		if ( $akismet->isCommentSpam() && !$user->isAllowed( 'bypassakismet' ) ) {
 			wfDebugLog( 'AkismetKlik', "Match!\n" );
 			$editInfo->spamPageWithContent( 'http://akismet.com blacklist error' );
 
