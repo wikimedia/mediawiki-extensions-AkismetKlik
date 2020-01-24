@@ -50,7 +50,7 @@ class AkismetKlik {
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
 	function filter( $title, $content, $section, $wikiPage, User $user ) {
-		global $wgAKSiteUrl, $wgAKkey, $IP;
+		global $wgAKSiteUrl, $wgAKkey;
 
 		if ( strlen( $wgAKkey ) == 0 ) {
 			throw new MWException( 'Set $wgAKkey in LocalSettings.php or relevant configuration file.' );
@@ -63,11 +63,7 @@ class AkismetKlik {
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 
 		# Do the match
-		if ( $user->mName == '' ) {
-			$username = $IP;
-		} else {
-			$username = $user->mName;
-		}
+		$username = $user->getName();
 		$akismet = new Akismet( $wgAKSiteUrl, $wgAKkey );
 		$akismet->setCommentAuthor( $username );
 		$akismet->setCommentAuthorEmail( $user->getEmail() );
