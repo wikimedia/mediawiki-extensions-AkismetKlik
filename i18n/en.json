@@ -4,5 +4,5 @@
 			"Carl Austin Bennett"
 		]
 	},
-	"akismetklik-desc": "Rejects edits from suspected comment spammers on Akismet's blacklist"
+	"akismetklik-desc": "Rejects edits from suspected comment spammers on Akismet's spamlist"
 }

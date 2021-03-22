@@ -73,7 +73,7 @@ class AkismetKlik {
 		$akismet->setPermalink( $wgAKSiteUrl . '/wiki/' . $title );
 		if ( $akismet->isCommentSpam() && !$user->isAllowed( 'bypassakismet' ) ) {
 			wfDebugLog( 'AkismetKlik', "Match!\n" );
-			$editInfo->spamPageWithContent( 'http://akismet.com blacklist error' );
+			$editInfo->spamPageWithContent( 'http://akismet.com spamlist error' );
 
 			return true;
 		}
