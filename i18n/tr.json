@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joseph"
+			"Joseph",
+			"SaldırganSincap"
 		]
 	},
-	"akismetklik-desc": "Akismet'in kara listesindeki şüpheli yorum spamcilerinden gelen değişiklikleri reddeder"
+	"akismetklik-desc": "Akismet spam listesindeki şüpheli yorum spam göndericilerinden yapılan düzenlemeleri reddeder"
 }

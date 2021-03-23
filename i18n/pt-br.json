@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cainamarques"
+			"Cainamarques",
+			"Mariagarbin"
 		]
 	},
-	"akismetklik-desc": "Rejeita edições suspeitas de spammers na lista negra do Akismet"
+	"akismetklik-desc": "Rejeita edições de suspeitos spammers de comentários na lista de spam do Akismet"
 }
