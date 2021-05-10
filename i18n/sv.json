@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ainali"
+			"Ainali",
+			"Technic2"
 		]
 	},
-	"akismetklik-desc": "Stoppar redigeringar som misstänks komma från kommentarspammare som finns på Akismets svartlista"
+	"akismetklik-desc": "Stoppar redigeringar som misstänks komma från kommentarspammare som finns på Akismets spamlista"
 }
