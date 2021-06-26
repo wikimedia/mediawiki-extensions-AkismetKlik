@@ -18,9 +18,10 @@ class AkismetKlik {
 	 * Hook function for EditFilterMergedContent, replaces wfAkismetFilter
 	 * @param IContextSource $context
 	 * @param Content $content
+	 * @param Status $status
 	 * @return bool
 	 */
-	public static function onAkismetFilterMergedContent( $context, $content ) {
+	public static function onAkismetFilterMergedContent( $context, $content, $status ) {
 		global $wgAKkey;
 		if ( strlen( $wgAKkey ) == 0 ) {
 			wfLogWarning( 'AkismetKlik is not enabled. Set $wgAKkey in LocalSettings.php.' );
@@ -35,6 +36,10 @@ class AkismetKlik {
 			$context->getWikiPage(),
 			$context->getUser()
 		 );
+		if ( $ret ) {
+			// @todo Remove this line after this extension do not support mediawiki version 1.36 and before
+			$status->value = EditPage::AS_HOOK_ERROR_EXPECTED;
+		}
 
 		return !$ret;
 	}
