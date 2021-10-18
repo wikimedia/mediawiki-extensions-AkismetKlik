@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Justincheng12345"
+			"Justincheng12345",
+			"Weather Top Wizard"
 		]
 	},
-	"akismetklik-desc": "拒絕於Akismet黑名單上疑似濫發訊息制造者的編輯"
+	"akismetklik-desc": "拒絕在Akismet破壞名單上的疑似垃圾信息製造者的編輯"
 }
