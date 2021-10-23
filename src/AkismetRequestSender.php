@@ -22,7 +22,7 @@ interface AkismetRequestSender {
 	 * @param string $request The data to send.
 	 * @param int $responseLength The amount of data to read.  Defaults to 1160 bytes.
 	 * @throws MWException An exception is thrown if a connection cannot be made to the remote host.
-	 * @return string    The server response
+	 * @return string The server response
 	 */
 	public function send( $host, $port, $request, $responseLength = 1160 );
 }
