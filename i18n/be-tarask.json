@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wizardist"
+			"Wizardist",
+			"Renessaince"
 		]
 	},
-	"akismetklik-desc": "Адхіляе рэдагаваньні ад падазроных спамэраў у камэнтарах паводле чорнага сьпісу Akismet"
+	"akismetklik-desc": "Адхіляе рэдагаваньні ад падазроных спамэраў у камэнтарах паводле спамавага сьпісу Akismet"
 }

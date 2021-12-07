@@ -2,8 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Erdemaslancan",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"Rodney Araujo"
 		]
 	},
-	"akismetklik-desc": "Rechaza las ediciones sospechosas de ser procedentes de ''spammers'' listados en la lista negra de Akismet"
+	"akismetklik-desc": "Rechaza las ediciones sospechosas de ser procedentes de ''spammers'' listados en la lista de spam de Akismet"
 }
