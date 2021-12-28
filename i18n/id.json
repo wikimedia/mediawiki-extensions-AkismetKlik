@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Farras"
+			"Farras",
+			"Daud I.F. Argana"
 		]
 	},
-	"akismetklik-desc": "Menolak suntingan dari terduga pembuat komentar sampah di daftar hitam Akismet"
+	"akismetklik-desc": "Menolak suntingan dari terduga pembuat komentar sampah di daftar spam Akismet"
 }
