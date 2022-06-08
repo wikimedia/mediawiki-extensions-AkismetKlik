@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hylle"
+			"Hylle",
+			"Saederup92"
 		]
 	},
-	"akismetklik-desc": "Afviser redigeringer fra mistænkte kommentar spammere på Akismet's sortliste"
+	"akismetklik-desc": "Afviser redigeringer fra mistænkte kommentar spammere på Akismet's spamliste"
 }
