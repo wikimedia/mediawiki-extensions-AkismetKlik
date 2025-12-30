@@ -62,7 +62,7 @@ class AkismetKlik {
 		}
 
 		# Run parser to strip SGML comments and such out of the markup
-		$text = ContentHandler::getContentText( $content );
+		$text = $content instanceof TextContent ? $content->getText() : '';
 		$editInfo = $wikiPage->prepareContentForEdit( $content );
 		$out = $editInfo->output;
 		$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
