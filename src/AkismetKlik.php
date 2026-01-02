@@ -19,13 +19,12 @@ class AkismetKlik {
 	 * @param IContextSource $context
 	 * @param Content $content
 	 * @param Status $status
-	 * @return bool
+	 * @return bool|void
 	 */
 	public static function onAkismetFilterMergedContent( $context, $content, $status ) {
 		global $wgAKkey;
-		if ( strlen( $wgAKkey ) == 0 ) {
-			wfLogWarning( 'AkismetKlik is not enabled. Set $wgAKkey in LocalSettings.php.' );
-			return true;
+		if ( !$wgAKkey ) {
+			return;
 		}
 
 		$spamObj = new AkismetKlik();
