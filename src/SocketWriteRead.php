@@ -1,7 +1,5 @@
 <?php
 
-use Wikimedia\AtEase\AtEase;
-
 /**
  * Used internally by Akismet
  *
@@ -51,9 +49,8 @@ class SocketWriteRead implements AkismetRequestSender {
 		}
 
 		if ( $fs !== false ) {
-			AtEase::suppressWarnings();
-			fwrite( $fs, $request );
-			AtEase::restoreWarnings();
+			// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+			@fwrite( $fs, $request );
 
 			while ( !feof( $fs ) ) {
 				$response .= fgets( $fs, $responseLength );
