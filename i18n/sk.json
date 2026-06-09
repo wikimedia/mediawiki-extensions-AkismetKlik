@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"akismetklik-desc": "Odmieta úpravy od používateľov podozrivých zo spamovania komentárov, ktorí sú na zozname spamu služby Akismet"
+}
